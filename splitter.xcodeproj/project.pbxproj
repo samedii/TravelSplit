@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E37AC21BDBF07C0076B412 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E37AC11BDBF07C0076B412 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
+		00E924951C08A479004E8C9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E924941C08A479004E8C9C /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		18733A3415026B32000D2399 /* hotell.png in Resources */ = {isa = PBXBuildFile; fileRef = 18733A3315026B32000D2399 /* hotell.png */; };
 		18733A3715026B45000D2399 /* bil.png in Resources */ = {isa = PBXBuildFile; fileRef = 18733A3515026B45000D2399 /* bil.png */; };
 		18733A3815026B45000D2399 /* drink.png in Resources */ = {isa = PBXBuildFile; fileRef = 18733A3615026B45000D2399 /* drink.png */; };
 		4819C70114682AF100CDB3F6 /* balloon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4819C70014682AF100CDB3F6 /* balloon2.png */; };
 		486663B4152FCA1F002E6148 /* SpecialProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 486663B3152FCA1F002E6148 /* SpecialProxy.m */; };
-		486663B715300E86002E6148 /* splitmate.png in Resources */ = {isa = PBXBuildFile; fileRef = 486663B615300E86002E6148 /* splitmate.png */; };
 		48AF30561587792600AC6F23 /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AF30551587792600AC6F23 /* BubbleView.m */; };
 		48AF3059158779EF00AC6F23 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 48AF3058158779EF00AC6F23 /* bubble.png */; };
 		48BB486414A0AE7B00B4F0FA /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BB486314A0AE7B00B4F0FA /* people.png */; };
@@ -85,13 +85,13 @@
 
 /* Begin PBXFileReference section */
 		00E37AC11BDBF07C0076B412 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		00E924941C08A479004E8C9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18733A3315026B32000D2399 /* hotell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotell.png; sourceTree = "<group>"; };
 		18733A3515026B45000D2399 /* bil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bil.png; sourceTree = "<group>"; };
 		18733A3615026B45000D2399 /* drink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drink.png; sourceTree = "<group>"; };
 		4819C70014682AF100CDB3F6 /* balloon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon2.png; sourceTree = "<group>"; };
 		486663B2152FCA1F002E6148 /* SpecialProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialProxy.h; sourceTree = "<group>"; };
 		486663B3152FCA1F002E6148 /* SpecialProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialProxy.m; sourceTree = "<group>"; };
-		486663B615300E86002E6148 /* splitmate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splitmate.png; sourceTree = "<group>"; };
 		48AF30541587792600AC6F23 /* BubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleView.h; sourceTree = "<group>"; };
 		48AF30551587792600AC6F23 /* BubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleView.m; sourceTree = "<group>"; };
 		48AF3058158779EF00AC6F23 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
@@ -306,6 +306,7 @@
 				48BB486714A0C86A00B4F0FA /* NSStringFormatting.m */,
 				48D77BCD151264E100141BBD /* UIScrollViewDetectTouches.h */,
 				48D77BCE151264E100141BBD /* UIScrollViewDetectTouches.m */,
+				00E924941C08A479004E8C9C /* Images.xcassets */,
 			);
 			path = splitter;
 			sourceTree = "<group>";
@@ -325,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				48AF3058158779EF00AC6F23 /* bubble.png */,
-				486663B615300E86002E6148 /* splitmate.png */,
 				48C57F7F151352DB00924E86 /* camera-icon.jpg */,
 				48D77BD1151285CB00141BBD /* other.png */,
 				48D2EB2A14E0414D00AC218D /* golf.png */,
@@ -450,6 +450,7 @@
 				48C2883B14DFD24F00042AD2 /* taxi.png in Resources */,
 				48C2883D14DFD34800042AD2 /* food2.png in Resources */,
 				48D2EB2B14E0414D00AC218D /* golf.png in Resources */,
+				00E924951C08A479004E8C9C /* Images.xcassets in Resources */,
 				48C0BD5A14E9886D00DE01ED /* defaultCurrencies.xml in Resources */,
 				18733A3415026B32000D2399 /* hotell.png in Resources */,
 				00E37AC21BDBF07C0076B412 /* Default-568h@2x.png in Resources */,
@@ -457,7 +458,6 @@
 				18733A3815026B45000D2399 /* drink.png in Resources */,
 				48D77BD2151285CB00141BBD /* other.png in Resources */,
 				48C57F80151352DB00924E86 /* camera-icon.jpg in Resources */,
-				486663B715300E86002E6148 /* splitmate.png in Resources */,
 				48AF3059158779EF00AC6F23 /* bubble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -610,7 +611,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "splitter/SplitMate-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TravelSplit;
 				PRODUCT_NAME = splitter;
 				PROVISIONING_PROFILE = "";
@@ -624,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -632,7 +634,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "splitter/SplitMate-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TravelSplit;
 				PRODUCT_NAME = splitter;
 				PROVISIONING_PROFILE = "";
