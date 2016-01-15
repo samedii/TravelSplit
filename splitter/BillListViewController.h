@@ -29,6 +29,9 @@
     
     CurrencyRateFetcher* fetcher;
     
+    UIScrollView *billList;
+    UIButton *addButton;
+    
 }
 
 //@property (retain) UINavigationController *navController;
@@ -39,6 +42,6 @@
 
 
 //Local
--(UIView*)createNewBillList;
+-(UIScrollView*)createNewBillList;
 
 @end

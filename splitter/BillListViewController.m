@@ -48,6 +48,8 @@
     [group release];
     [iconPicker release];
     [navController release];
+    [billList release];
+    [addButton release];
     [super dealloc];
 }
 
@@ -109,12 +111,16 @@
     
     */
     
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
     
     
-    
-    UIView *box = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [box addSubview:[self createNewBillList]];
+    UIView *box = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight-20-49)];
+    billList = [self createNewBillList];
+    [box addSubview:billList];
     [self setView:box];
+    
     
     //[billListView release];
     
@@ -126,6 +132,12 @@
     //navBarController = [[UINavigationController alloc] initWithRootViewController:self];
 
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [billList scrollRectToVisible:addButton.frame animated:NO];
 }
 
 -(void)removeAllBills {
@@ -146,10 +158,13 @@
 	}
 } 
 
--(UIView*)createNewBillList {
+-(UIScrollView*)createNewBillList {
     
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
     
-    CGRect scrollFrame = CGRectMake(0, 20, 320, 480-20-49);
+    CGRect scrollFrame = CGRectMake(0, 20, screenWidth, screenHeight-20-49);
     UIScrollView *billListView = [[UIScrollView alloc] initWithFrame:scrollFrame];
 
     //for bill in billList create bill and add to scroll view
@@ -188,7 +203,7 @@
     [billList release];
     
     //add button
-    UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];//[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    addButton = [UIButton buttonWithType:UIButtonTypeCustom];//[UIButton buttonWithType:UIButtonTypeRoundedRect];
     UIImage *addButtonImg = [UIImage imageNamed:@"cleaned-plus.png"];
     [addButton setImage:addButtonImg forState:UIControlStateNormal];
     

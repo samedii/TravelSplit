@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E37AC21BDBF07C0076B412 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E37AC11BDBF07C0076B412 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
-		00E924951C08A479004E8C9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E924941C08A479004E8C9C /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		00E37AC21BDBF07C0076B412 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E37AC11BDBF07C0076B412 /* Default-568h@2x.png */; };
+		00E924951C08A479004E8C9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E924941C08A479004E8C9C /* Images.xcassets */; };
 		18733A3415026B32000D2399 /* hotell.png in Resources */ = {isa = PBXBuildFile; fileRef = 18733A3315026B32000D2399 /* hotell.png */; };
 		18733A3715026B45000D2399 /* bil.png in Resources */ = {isa = PBXBuildFile; fileRef = 18733A3515026B45000D2399 /* bil.png */; };
 		18733A3815026B45000D2399 /* drink.png in Resources */ = {isa = PBXBuildFile; fileRef = 18733A3615026B45000D2399 /* drink.png */; };
