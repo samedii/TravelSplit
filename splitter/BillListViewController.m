@@ -111,15 +111,8 @@
     
     */
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
+    [self setView:[self createNewBillList]];
     
-    
-    UIView *box = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight-20-49)];
-    billList = [self createNewBillList];
-    [box addSubview:billList];
-    [self setView:box];
     
     
     //[billListView release];
@@ -158,23 +151,24 @@
 	}
 } 
 
--(UIScrollView*)createNewBillList {
+-(UIView*)createNewBillList {
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
+    NSLog(@"bla2 %f", screenHeight);
     
     CGRect scrollFrame = CGRectMake(0, 20, screenWidth, screenHeight-20-49);
     UIScrollView *billListView = [[UIScrollView alloc] initWithFrame:scrollFrame];
 
     //for bill in billList create bill and add to scroll view
     
-    NSArray *billList = [billBook getBillList];
-    [billList retain];
+    NSArray *billListArray = [billBook getBillList];
+    [billListArray retain];
     
 	
 	int posY = 10;
-	if( [ billList count ] ){
+	if( [ billListArray count ] ){
 		
 		UIButton* trash = [ UIButton buttonWithType:UIButtonTypeCustom ];
 		UIImage* trashImg = [ UIImage imageNamed:@"trash.png" ];
@@ -182,7 +176,7 @@
 		//[ trash setTitle:@"Trash" forState:UIControlStateNormal ];
 		[billListView addSubview:trash ];
 		CGRect rt = trash.frame;
-		rt.origin = CGPointMake(320 - 60, 2);
+		rt.origin = CGPointMake(screenWidth - 60, 2);
 		rt.size = CGSizeMake(60,50);
 		trash.frame = rt;
 		[trash addTarget:self action:@selector(removeAllBills) forControlEvents:UIControlEventTouchUpInside];
@@ -191,8 +185,8 @@
 	}
     
     
-    for (Bill *aBill in billList) {
-        CGRect aFrame = CGRectMake(0, posY, 320, 200);
+    for (Bill *aBill in billListArray) {
+        CGRect aFrame = CGRectMake(0, posY, screenWidth, 200);
         BillView *aBillView = [[BillView alloc] initWithFrame:aFrame listener:self andBill:aBill];
         [billListView addSubview:aBillView];
         
@@ -200,7 +194,7 @@
         [aBillView release];
     }
     
-    [billList release];
+    [billListArray release];
     
     //add button
     addButton = [UIButton buttonWithType:UIButtonTypeCustom];//[UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -208,7 +202,7 @@
     [addButton setImage:addButtonImg forState:UIControlStateNormal];
     
     int imageSize = 45;
-    [addButton setFrame:CGRectMake(320-9-imageSize, posY, imageSize, imageSize)];
+    [addButton setFrame:CGRectMake(screenWidth-9-imageSize, posY, imageSize, imageSize)];
     posY += imageSize + 10;
     //[addButton setTitle:@"Add bill" forState:UIControlStateNormal];
     
@@ -216,13 +210,14 @@
     
     [billListView addSubview:addButton];
     
-    [billListView setContentSize:CGSizeMake(320, posY)];
+    [billListView setContentSize:CGSizeMake(screenWidth, posY)];
     [billListView scrollRectToVisible:addButton.frame animated:NO];
     
-    
+    billList = billListView;
 
-    
-    return [billListView autorelease];
+    UIView *box =[[UIView alloc] initWithFrame:CGRectMake(0, 20, screenWidth, screenHeight-20-49)];
+    [box addSubview:billListView];
+    return box;
     
 }
 
